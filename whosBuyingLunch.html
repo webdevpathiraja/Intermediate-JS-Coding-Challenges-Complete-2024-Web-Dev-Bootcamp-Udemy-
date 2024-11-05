@@ -1,0 +1,33 @@
+<!--Who's Buying Lunch? Code Challenge
+You are going to write a function which will select a random name from a list of names. The person selected will have to pay for everybody's food bill.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who is Buying Lunch</title>
+</head>
+<body>
+    <script>
+        var names = ["Mary", "Sam", "Michael", "Dinith", "Anupama", "Rachel", "Aken"]
+
+        function whosPaying(names) {
+            var numberOfPeople = names.length; // The number of people = the number of items in the array
+            
+            // choosing a random perosn from the array list
+            // Math.random() => generates a random number 0 - 0.999...
+            // Math.random() * number of people => (0 - 0.99999) * np => 0 - 6.9999...
+            // Math.floor(Math.random() * number of people) => 0 - 6 => matches the indices of the array items
+            // 0 - Mary, 1 - Sam, 2 - Michael, 3 - Dinith, 4 - Anupama likewise
+            // var randomPeronIndex = Math.floor(Math.random() * number of people) => index
+            // var randomPersonName = names[randomPersonIndex]
+
+            var randomPeronIndex = Math.floor(Math.random() * numberOfPeople);
+            var randomPersonName = names[randomPeronIndex];
+
+            return randomPersonName + " is going to buy lunch today!";
+        }
+    </script>
+</body>
+</html>

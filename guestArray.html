@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest List</title>
+</head>
+<body>
+    <script>
+        var guestList = ["aloka", "Anupama", "Sathmi", "Deshani", "Sachintha", "Matheesha", "Suvindu",]
+
+
+        var name = prompt("Enter your name: "); // aloka
+        var nameCapital = name.slice(0,1).toUpperCase(); // A e
+        var fullName = nameCapital + name.slice(1,name.length); // Aloka
+
+        if (guestList.includes(fullName)) {
+            console.log("Hello " + fullName + " , Welcome.")
+        } else {
+            console.log("Hey Sorry " + fullName + " , You are not invited.")
+        }
+    </script>
+</body>
+</html>
+
