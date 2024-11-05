@@ -1,15 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>99 Bottles Challenge</title>
+</head>
+<body>
+   <script>
+       
+       var numberOfBottles = 99;
 
 
-var numberOfBottles = 99
-while (numberOfBottles >= 0) {
-    var bottleWord = "bottle";
-    if (numberOfBottles === 1) {
-        bottleWord = "bottles";
-    } 
-    console.log(numberOfBottles + " " + bottleWord + " of beer on the wall");
-    console.log(numberOfBottles + " " + bottleWord + " of beer,");
-    console.log("Take one down, pass it around,");
-	numberOfBottles--;
-    console.log(numberOfBottles + " " + bottleWord + " of beer on the wall.");
-}
-If you want to challenge yourself further, try changing the code to make the english more grammatically correct. So the final output should say "1 bottle of beer on the wall" when numberOfBottles is equal to 1 rather than "1 bottles of beer on the wall" and when numberOfBottles is equal to 0, you can make the output "No more bottles of beer on the wall" instead of 0 bottles of beer on the wall".
+       while (numberOfBottles > 0) {
+        if (numberOfBottles === 1) { // if 1 => 'bootle'
+            var word = "bottle"
+        } else {word = "bottles"} // if more than 1 => 'bottles'
+        console.log(numberOfBottles + " " + word + " of beer on the wall,");
+
+        console.log(numberOfBottles + " " + word + " of beer.");
+        console.log("Take one down and pass it around,");
+        
+
+        numberOfBottles--;
+
+        if (numberOfBottles === 1) { // if 1 => 'bootle'
+            word = "bottle";
+        } else if(numberOfBottles === 0) { // if 0 => 'no more'
+            console.log("No more bottles of beer on the wall.")
+            continue;
+        } 
+        else (word = "bottles")
+       
+
+        console.log(numberOfBottles + " " + word + " of beer on the wall.")
+       
+        
+
+       }
+
+       console.log("No more bottles of beer on the wall, no more bottles of beer.");
+       console.log("Go to the store and buy some more, 99 bottles of beer on the wall.");
+
+        
+   </script> 
+</body>
+</html>
